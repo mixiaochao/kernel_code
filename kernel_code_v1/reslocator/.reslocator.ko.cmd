@@ -1,0 +1,1 @@
+cmd_/srv/ftp/pub/UEA/lesson_kernel/reslocator/reslocator.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /srv/ftp/pub/UEA/lesson_kernel/reslocator/reslocator.ko /srv/ftp/pub/UEA/lesson_kernel/reslocator/reslocator.o /srv/ftp/pub/UEA/lesson_kernel/reslocator/reslocator.mod.o

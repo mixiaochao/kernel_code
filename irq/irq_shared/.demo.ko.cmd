@@ -1,0 +1,1 @@
+cmd_/home/mxc/linux-3.5/drivers/solomon/irq/irq_shared/demo.ko := arm-linux-ld -EL -r  -T /home/mxc/linux-3.5/scripts/module-common.lds --build-id  -o /home/mxc/linux-3.5/drivers/solomon/irq/irq_shared/demo.ko /home/mxc/linux-3.5/drivers/solomon/irq/irq_shared/demo.o /home/mxc/linux-3.5/drivers/solomon/irq/irq_shared/demo.mod.o

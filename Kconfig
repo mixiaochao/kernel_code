@@ -1,0 +1,83 @@
+#bool, tristate
+#int, hex, string
+#default, range
+#help, prompt, select, choice, depends on
+#menuconfig/config
+#menu/endmenu
+#if/endif
+
+menuconfig SOLOMON
+	bool "select all and come into our demo"
+	---help---
+	 just our demo about kconfig syntax
+	 Documention/kbuild/Kconfig-language
+
+if SOLOMON
+
+menu "about tristate, string, int, hex..."
+
+config TINY4412LED
+	tristate
+	prompt "led on tiny4412 core board"
+	---help---
+	 nothing
+
+config LEDNUM
+	int
+	range 0 4
+	prompt "number of led on tiny4412 core board"
+	---help---
+	 nothing
+
+config IFPRISTR 
+	tristate
+	prompt "to print our string"
+	---help---
+	 nothing
+
+config OURSTR 
+	string
+	prompt "our string"
+	---help---
+	 nothing
+
+endmenu
+
+menu "select, choice, depends on"
+
+config DRV_A 
+ 	bool	
+	prompt "drv a"
+	select DRV_B
+	---help---
+	 nothing
+
+config DRV_B
+	bool
+	prompt "drv b"
+	---help---
+
+config DRV_C
+	bool
+	depends on DRV_A
+	prompt "drv c"
+	---help---
+
+choice 
+	prompt "select one wdt driver"
+
+config DRV_D1
+	bool
+	prompt "drv d1"
+	---help---
+
+config DRV_D2
+	bool
+	prompt "drv d2"
+	---help---
+	
+endchoice
+
+endmenu
+
+endif

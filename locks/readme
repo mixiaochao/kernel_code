@@ -1,0 +1,37 @@
+
+内核加锁方法:
+
+	睡眠锁:
+		信号量锁:
+			struct semaphore sema;
+			
+			sema_init(&sema, 1);
+			down(&sema);  / down_trylock();
+
+			up(&sema);
+
+		互斥锁：
+			struct mutex mutex;
+
+			mutex_init(&mutex);
+
+			mutex_lock(&mutex);   /  mutex_trylock(&mutex);
+
+			mutex_unlock(&mutex);
+
+
+	非睡眠锁:
+		自旋锁:
+
+			spinlock_t spin;
+
+			spin_lock_init(&spin);
+
+
+			spin_lock(); /  spin_unlock();
+			spin_lock_irqsave(); / spin_unlock_irqrestore();
+			spin_lock_bh(); / spin_unlock_bh();
+
+			spin_trylock();
+			spin_trylock_irqsave();
+			spin_trylock_bh();

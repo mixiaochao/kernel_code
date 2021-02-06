@@ -1,0 +1,32 @@
+
+
+
+混杂设备驱动的注册方式
+
+当需要为一个设备注册字符设备驱动时，用这种方式注册简单方便。
+
+1. 调试方式
+
+	混杂设备驱动的主设备号都一样：为10
+
+	mxc@solomon:miscled$ cat /proc/devices | grep misc
+	10 misc
+
+	我们注册的驱动是和次设备号对应起来的。
+
+	cat /proc/misc
+
+	通过这个命令可以查看当前内核已使用的次设备号
+
+
+2. 编写驱动流程
+
+	#include <linux/miscdevice.h>
+
+	struct miscdevice misc = {
+		.minor = MISC_DYNAMIC_MINOR, 
+		.name  = 设备文件名
+		.fops  = 驱动函数集
+	};
+
+	misc_register();

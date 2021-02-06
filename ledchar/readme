@@ -1,0 +1,19 @@
+
+
+0. insmod led.ko
+
+
+1. 查看注册驱动是否成功
+
+	cat /proc/devices
+
+2. 注册成功后，请通过mknod命令手动创建设备文件。
+
+	mknod  /dev/led c 100 0 
+
+	备注: 使用register_chrdev注册字符设备驱动，不会自动生成设备文件。
+
+3. 写app
+	usage:
+		./a.out    /dev/led   on/off  1~4
+		./a.out    /dev/led   state 

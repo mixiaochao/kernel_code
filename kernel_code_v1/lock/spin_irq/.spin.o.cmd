@@ -1,0 +1,1 @@
+cmd_/srv/ftp/pub/UEA/lesson_kernel/lock/spin_irq/spin.o := arm-linux-ld -EL    -r -o /srv/ftp/pub/UEA/lesson_kernel/lock/spin_irq/spin.o /srv/ftp/pub/UEA/lesson_kernel/lock/spin_irq/demo.o /srv/ftp/pub/UEA/lesson_kernel/lock/spin_irq/key.o 

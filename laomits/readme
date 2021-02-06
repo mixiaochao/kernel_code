@@ -1,0 +1,55 @@
+
+
+1. 硬件原理图
+
+	1> LCD的硬件原理图
+
+	LCD硬件原理图了解到，触摸屏和ft5206这个型号的触摸屏控制模块直接相连，触摸屏控制模块和底板相连接
+	的引脚的网络标号为:
+
+	41, SCL2: I2C接口的串行时钟引脚
+	42, SDA2: I2C接口的串行数据引脚
+	43, EINT14: 触摸屏控制模块的外部中断引脚，中断产生的原因是用户点击触摸屏后，控制模块处理完数据后会产生中断信号
+	32, nRESET: 这里没有用到 
+
+
+	2> 底板图
+
+	45个排线的插排	     中间电路          3.3  电平转换芯片     1.8	    核心板			
+	TP_SCL 		       -->     i2cSCL1_OUT     -->           i2cSCL1    --> Xi2c1SCL/GPD1_3
+	TP_SDA 		       -->     i2cSDA1_OUT     -->           i2cSDA1    --> Xi2c1SDA/GPD1_2
+	XEINT14_OUT 	       -->     XEINT14_OUT     -->           XEINT14    --> GPX1_6
+
+2. datasheet
+
+	1> ft5206(slaver)
+
+		i2c read
+		i2c write
+
+		interrupt trigger: fallingege
+
+		0x00  bit0 ~ bit7 rw
+
+		......
+
+		0x1e
+
+		0x1f --> 16 + 15 = 31
+	
+		ft5206 slave address ??????????????????????????????
+
+		0x38
+
+	2> iic(master on exynos4412) 
+
+		GPIO:
+
+		GPD1CON[3]  [15:12]  0x2 = I2C_1_SCL
+		GPD1CON[2]  [11:8]   0x2 = I2C_1_SDA
+
+		GPX1CON[6]  [27:24]  0xF = EXT_INT41[6]
+
+		I2C:
+
+

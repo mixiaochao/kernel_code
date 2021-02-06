@@ -1,0 +1,1 @@
+cmd_/srv/ftp/pub/UEA/lesson_kernel/drv_model/platform/drv.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /srv/ftp/pub/UEA/lesson_kernel/drv_model/platform/drv.ko /srv/ftp/pub/UEA/lesson_kernel/drv_model/platform/drv.o /srv/ftp/pub/UEA/lesson_kernel/drv_model/platform/drv.mod.o

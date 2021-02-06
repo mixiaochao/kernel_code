@@ -1,0 +1,1 @@
+cmd_/home/mxc/linux-3.5/drivers/solomon/locks/kbufchardrv/kbuf.ko := arm-linux-ld -EL -r  -T /home/mxc/linux-3.5/scripts/module-common.lds --build-id  -o /home/mxc/linux-3.5/drivers/solomon/locks/kbufchardrv/kbuf.ko /home/mxc/linux-3.5/drivers/solomon/locks/kbufchardrv/kbuf.o /home/mxc/linux-3.5/drivers/solomon/locks/kbufchardrv/kbuf.mod.o

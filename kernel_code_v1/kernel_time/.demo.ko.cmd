@@ -1,0 +1,1 @@
+cmd_/srv/ftp/pub/UEA/lesson_kernel/kernel_time/demo.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /srv/ftp/pub/UEA/lesson_kernel/kernel_time/demo.ko /srv/ftp/pub/UEA/lesson_kernel/kernel_time/demo.o /srv/ftp/pub/UEA/lesson_kernel/kernel_time/demo.mod.o

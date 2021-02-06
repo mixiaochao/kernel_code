@@ -1,0 +1,1 @@
+cmd_/home/mxc/linux-3.5/drivers/solomon/kbufchardrv_block/kbuf.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/mxc/linux-3.5/drivers/solomon/kbufchardrv_block/kbuf.ko /home/mxc/linux-3.5/drivers/solomon/kbufchardrv_block/kbuf.o /home/mxc/linux-3.5/drivers/solomon/kbufchardrv_block/kbuf.mod.o;  true

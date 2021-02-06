@@ -1,0 +1,1 @@
+cmd_/home/mxc/linux-3.5/drivers/solomon/modules/demo2/demo0.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/mxc/linux-3.5/drivers/solomon/modules/demo2/demo0.ko /home/mxc/linux-3.5/drivers/solomon/modules/demo2/demo0.o /home/mxc/linux-3.5/drivers/solomon/modules/demo2/demo0.mod.o;  true

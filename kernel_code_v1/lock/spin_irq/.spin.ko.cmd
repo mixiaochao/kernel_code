@@ -1,0 +1,1 @@
+cmd_/srv/ftp/pub/UEA/lesson_kernel/lock/spin_irq/spin.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /srv/ftp/pub/UEA/lesson_kernel/lock/spin_irq/spin.ko /srv/ftp/pub/UEA/lesson_kernel/lock/spin_irq/spin.o /srv/ftp/pub/UEA/lesson_kernel/lock/spin_irq/spin.mod.o

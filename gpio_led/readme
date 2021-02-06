@@ -1,0 +1,40 @@
+
+#include <linux/gpio.h>
+
+每个GPIO都有一个来自SOC的生产厂商添加到内核的一个具体编号，使用GPIO子系统提供的
+函数接口，通过gpio的编号实现对gpio的操作。
+
+
+1. 编号
+	对于exynos4412来说，他们的gpio引脚编号从如下头文件获得：
+
+	linux-3.5/arch/arm/mach-exynos/include/mach/gpio.h
+
+
+2. std api
+
+	int gpio_request();/void gpio_free();
+
+	
+	gpio_direction_input();
+	gpio_direction_output();
+
+	
+	gpio_get_value();
+	gpio_set_value();
+
+3. samsung 实现的设置gpio引脚的函数接口及设置的值对应的符号常量如下 	
+
+	arch/arm/plat-samsung/plat/gpio-cfg.h
+
+	/* Defines for generic pin configurations */
+	#define S3C_GPIO_INPUT	(S3C_GPIO_SPECIAL(0))
+	#define S3C_GPIO_OUTPUT	(S3C_GPIO_SPECIAL(1))
+	#define S3C_GPIO_SFN(x)	(S3C_GPIO_SPECIAL(x))
+
+
+	s3c_gpio_cfgpin() 
+
+
+
+

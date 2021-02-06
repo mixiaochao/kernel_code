@@ -1,0 +1,1 @@
+cmd_/srv/ftp/pub/UEA/lesson_kernel/irq_bh/tasklet_bh/key.ko := arm-linux-ld -EL -r  -T /linux-3.5/scripts/module-common.lds --build-id  -o /srv/ftp/pub/UEA/lesson_kernel/irq_bh/tasklet_bh/key.ko /srv/ftp/pub/UEA/lesson_kernel/irq_bh/tasklet_bh/key.o /srv/ftp/pub/UEA/lesson_kernel/irq_bh/tasklet_bh/key.mod.o

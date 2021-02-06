@@ -1,0 +1,2 @@
+/home/mxc/linux-3.5/drivers/solomon/modules/demo3/demo0.o
+

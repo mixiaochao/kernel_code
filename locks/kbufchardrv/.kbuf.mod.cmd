@@ -1,0 +1,1 @@
+cmd_/home/mxc/linux-3.5/drivers/solomon/locks/kbufchardrv/kbuf.mod := { echo  /home/mxc/linux-3.5/drivers/solomon/locks/kbufchardrv/kbuf.o; echo; } > /home/mxc/linux-3.5/drivers/solomon/locks/kbufchardrv/kbuf.mod

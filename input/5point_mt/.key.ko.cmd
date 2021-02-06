@@ -1,0 +1,1 @@
+cmd_/home/mxc/linux-3.5/drivers/solomon/input/5point_mt/key.ko := arm-linux-ld -EL -r  -T /home/mxc/linux-3.5/scripts/module-common.lds --build-id  -o /home/mxc/linux-3.5/drivers/solomon/input/5point_mt/key.ko /home/mxc/linux-3.5/drivers/solomon/input/5point_mt/key.o /home/mxc/linux-3.5/drivers/solomon/input/5point_mt/key.mod.o

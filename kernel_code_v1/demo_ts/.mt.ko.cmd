@@ -1,0 +1,1 @@
+cmd_/srv/ftp/pub/UEA/lesson_kernel/demo_ts/mt.ko := arm-linux-ld -EL -r  -T /home/xiaochaomi/linux-3.5/scripts/module-common.lds --build-id  -o /srv/ftp/pub/UEA/lesson_kernel/demo_ts/mt.ko /srv/ftp/pub/UEA/lesson_kernel/demo_ts/mt.o /srv/ftp/pub/UEA/lesson_kernel/demo_ts/mt.mod.o
